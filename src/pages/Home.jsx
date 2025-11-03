@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react'
-import Items from '../components/items'
-import Title from '../components/Title'
-import { ShopContext } from '../context/GoshenContext'
-import NewArrival from '../components/NewArrival'
-import BestSeller from '../components/BestSeller'
+import Items from '../components/Items.jsx'
+import Title from '../components/Title.jsx'
+import { ShopContext } from '../context/GoshenContext.jsx'
+import NewArrival from '../components/NewArrival.jsx'
+import BestSeller from '../components/BestSeller.jsx'
 
 
 const Home = () => {
