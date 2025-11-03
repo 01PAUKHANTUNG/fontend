@@ -110,6 +110,18 @@ export const products = [
         newArrive : false,
         image: shampoo,
         date : 1234567,
+    },
+    {
+        id:"i",
+        name:"Fruits",
+        category : "Fruits",
+        description: "Lusawpna",
+        price: 50.00,
+        bestSelling : true,
+        stockavaiable : true,
+        newArrive : false,
+        image: swepyinan,
+        date : 1234567,
     }
 
 ]
