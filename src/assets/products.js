@@ -1,4 +1,4 @@
-import shampoo from '../assets/products/shampoo.jpg'
+import shampoo from '../assets/products/Shampoo.jpg'
 import swepyinan from '../assets/products/Swepyinan.avif'
 import mama from '../assets/products/MaMa.webp'
 import coffee from '../assets/products/Coffee.webp'
