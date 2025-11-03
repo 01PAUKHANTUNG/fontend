@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { ShopContext } from '../context/GoshenContext';
-import Items from '../components/items';
-import FilterBox from '../components/FilterBox';
-import Title from '../components/Title';
+import { ShopContext } from '../context/GoshenContext.jsx';
+import Items from '../components/Items.jsx';
+import FilterBox from '../components/FilterBox.jsx';
+import Title from '../components/Title.jsx';
 
 const Fruits = () => {
     const {products, currency} = useContext(ShopContext);

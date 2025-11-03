@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router'
-import { ShopContext } from '../context/GoshenContext';
+import { ShopContext } from '../context/GoshenContext.jsx';
 
 const ProductItems = () => {
     const {products, currency} = useContext(ShopContext);
