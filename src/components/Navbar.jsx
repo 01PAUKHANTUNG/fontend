@@ -11,8 +11,8 @@ const Navbar = () => {
    const [subMenu, setSubmenu] = useState();
 
   return (
-    <div>
-       <div className='flex justify-between border-gray-300 border-b-2 items-center px-5 py-2'>
+    <div className='w-full mx-auto'>
+       <div className='w-full flex justify-between border-gray-300 border-b-2 items-center px-5 py-2'>
         <Link to='/'> 
             <img className='w-[110px] cursor-pointer' src={logo} alt=''/>
         </Link>
@@ -27,7 +27,7 @@ const Navbar = () => {
               
 
 
-            <button className='flex gap-2 justify-center w-[150px] py-3 px-2 rounded-full bg-black text-white font-bold hover:bg-gray-400 hover:text-black'> $0.00 </button>
+            <Link to='/cart' className='flex gap-2 justify-center w-[150px] py-3 px-2 rounded-full bg-black text-white font-bold hover:bg-gray-400 hover:text-black'> $0.00 </Link>
                
          </div>
        </div>
@@ -47,6 +47,7 @@ const Navbar = () => {
 
                <button className='hover:text-amber-500 py-2 px-4 font-semibold text-xl'> Products </button>
                {subMenu && (<div className='absolute left-0 top-full text-xl grid grid-cols-4 gap-6 bg-white shadow-lg border rounded-md p-6 w-[1000px] z-50'>
+                   <NavLink to='/beauti'className='hover:text-amber-500 active:text-amber-700'> Beauti & Cosmetics </NavLink>
                    <NavLink to='/fruits'className='hover:text-amber-500 active:text-amber-700'> Fruits </NavLink>
                    <NavLink to='/'className='hover:text-amber-500 active:text-amber-700'> Vegetables </NavLink>
                    <NavLink to='/'className='hover:text-amber-500 active:text-amber-700'> Gas Burner </NavLink>

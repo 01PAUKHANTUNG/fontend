@@ -1,17 +1,17 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { ShopContext } from '../context/GoshenContext.jsx';
-import Items from '../components/Items.jsx';
-import FilterBox from '../components/FilterBox.jsx';
 import Title from '../components/Title.jsx';
+import FilterBox from '../components/FilterBox.jsx';
+import Items from '../components/Items.jsx';
 
-const Fruits = () => {
-    const {products, currency} = useContext(ShopContext);
-    const [fruitProducts, setFruitProducts] = useState([]);
+const Beauti = () => {
+   const {products, currency} = useContext(ShopContext);
+    const [beautiProducts, setBeautiProducts] = useState([]);
     const [result, setResult] = useState([]);     
       
     useEffect(()=>{
-    const fruits = products.filter((item)=>(item.category === 'Fruits'))
-    setFruitProducts(fruits)         
+    const beauti = products.filter((item)=>(item.category === 'Beauti & Cosmetics'))
+    setBeautiProducts(beauti)         
     },[products])
           
     useEffect(()=>{
@@ -20,8 +20,8 @@ const Fruits = () => {
 
   return (
     <div className='w-[95%] mx-auto py-4 '>
-      <Title title="Fruits" />
-      <FilterBox products={fruitProducts} setResult={setResult}/>
+      <Title title="Beauti & Cosmetics" />
+      <FilterBox products={beautiProducts} setResult={setResult}/>
       <div className='flex mx-auto'>
        <div className="grid mx-auto sm:grid-cols-3 md:grid-cols-4 sm:gap-3 lg:grid-cols-4 justify-center items-center mt-5 ">
              {
@@ -43,4 +43,4 @@ const Fruits = () => {
   )
 }
 
-export default Fruits
+export default Beauti

@@ -20,7 +20,6 @@ const Home = () => {
         <div className='py-6'>
          <BestSeller />
        </div>
-      
     </div>
   )
 }

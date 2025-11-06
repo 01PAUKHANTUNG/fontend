@@ -1,13 +1,34 @@
-import React, { createContext } from 'react'
+import React, { createContext, useState } from 'react'
 import { products } from '../assets/products';
 
 export const ShopContext = createContext();
 
 
 const GoshenShopProvider = (props) => {
-    const currency = "$"
+  const [cartItems, setCartItems ] = useState({})
 
-  const value = {products, currency}
+
+ const currency = "$"
+
+  const addToCart = async ()=>{
+  let cartData = structuredClone(cartItems);
+
+    if(cartData[id]){
+      if(cartData[id][size]){
+         cartData[id][size] += 1 ;
+
+      }else{
+        cartData[id][size] = 1;    
+      }
+
+    }else{
+      cartData[id] ={};
+      cartData[id][size] = 1;    
+    }
+    setCartItems(cartData);
+  }
+
+  const value = {products, currency, addToCart}
       return(
           <ShopContext.Provider value={value} >
             {props.children}

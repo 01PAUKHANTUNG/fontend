@@ -21,8 +21,8 @@ const Footer = () => {
        <div className=''>
          <p className='text-black text-xl mb-2'>Product Category</p>
           <div className='flex flex-col'>
-           <Link  className='text-black cursor-pointer hover:text-amber-500'to='/fruit'>  Fruit</Link>
-           <Link  className='text-black cursor-pointer hover:text-amber-500'to='/vegetable'> Vegetable</Link>
+           <Link  className='text-black cursor-pointer hover:text-amber-500' to='/fruits'>  Fruits</Link>
+           <Link  className='text-black cursor-pointer hover:text-amber-500' to='/vegetable'> Vegetable</Link>
          </div>
        </div>
        <div>

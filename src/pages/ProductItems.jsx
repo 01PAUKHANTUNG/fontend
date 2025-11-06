@@ -3,9 +3,10 @@ import { useParams } from 'react-router'
 import { ShopContext } from '../context/GoshenContext.jsx';
 
 const ProductItems = () => {
-    const {products, currency} = useContext(ShopContext);
+    const {products, currency, addToCart} = useContext(ShopContext);
     const {productId} = useParams();
     const [productData, setProductData] = useState(false);
+    
 
     const fetchProductData = ()=>{
         products.map((item)=>{
@@ -15,6 +16,8 @@ const ProductItems = () => {
             }       
         })
     }
+
+  
 
     useEffect(()=>{
         fetchProductData()
@@ -44,8 +47,7 @@ const ProductItems = () => {
             
             <hr />
             <div className='flex justify-center gap-32'>
-               <button className='w-[400px] py-2 px-4 bg-black hover:bg-green-700 text-white text-xl font-semibold hover:shadow-lg '> Add to Card</button>
-               <button className='w-[400px] py-2 px-4 text-black hover:bg-green-700  hover:text-white border-2 border-gray-400  text-xl font-semibold'> Buy Now</button>
+               <button onClick={()=>addToCart()} className='w-[400px] py-2 px-4 bg-black hover:bg-green-700 text-white text-xl font-semibold hover:shadow-lg '> Add to Card</button>
             </div>
         </div>
       </div>
