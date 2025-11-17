@@ -12,6 +12,8 @@ const NewArrival = () => {
              setNewArrive(newProducts.slice(0,30))
         },[products])
 
+      
+
   return (
 
     <div >

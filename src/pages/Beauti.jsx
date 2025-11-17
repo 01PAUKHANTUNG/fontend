@@ -14,10 +14,7 @@ const Beauti = () => {
     setBeautiProducts(beauti)         
     },[products])
           
-    useEffect(()=>{
-    console.log("fruit result :" , result)
-    },[result])
-
+    
   return (
     <div className='w-[95%] mx-auto py-4 '>
       <Title title="Beauti & Cosmetics" />

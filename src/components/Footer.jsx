@@ -12,11 +12,11 @@ const Footer = () => {
        <div>
          <p className='text-black text-xl mb-2'>Contact Us</p>
           <p className='text-black '>Email :</p>
-          <p className='text-black '>pktung470@gmail.com</p>
+          <p className='text-black '>goshenstore20@gmail.com</p>
           <p className='text-black '>Phone :</p>
-          <p className='text-black '>09456726976</p>
-          <p className='text-black '>Address</p>
-          <p className='text-black '>Myoma/Tedim</p>
+          <p className='text-black '>+61 470 499 780</p>
+          <p className='text-black '>Address :</p>
+          <p className='text-black '>2C Station St, Ringwood, Melbourne, VIC, Australia, Victoria</p>
        </div>
        <div className=''>
          <p className='text-black text-xl mb-2'>Product Category</p>
@@ -28,7 +28,7 @@ const Footer = () => {
        <div>
           <p className='text-black text-xl mb-2'> Social Media</p>
           <div className='flex flex-col'>
-             <a href='' className='text-black cursor-pointer hover:text-amber-500'>Facebook</a> 
+             <a href='https://www.facebook.com/goshenstoreringwood?__cft__[0]=AZVj-Q_7Ko9_mMKs-zrTL2JwvqednWdjZtE67oZfLC_yqCpIuORxqKtpr1rbshik_SNLpJg4Cyr75CP47Akl6i9qnTD63gK4eJLWm7FMgLXSVZR-kddwB7E_wDnsJcfZgXC2Vaxx2FHfLuriyxExuT7dMamUk-GmIqvoDa7Ib4bv_vpRyEkRfZY-seXTbhFrfoM&__tn__=-UC%2CP-R' className='text-black cursor-pointer hover:text-amber-500'>Facebook</a> 
              <a href='' className='text-black cursor-pointer hover:text-amber-500'>Instagram</a> 
            </div>
        </div>

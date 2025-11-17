@@ -11,12 +11,14 @@ import Fruits from './pages/Fruits'
 import ProductItems from './pages/ProductItems'
 import Cart from './pages/Cart'
 import Beauti from './pages/Beauti'
+import { ToastContainer } from 'react-toastify'
 
 
 const App = () => {
   return (
     <div className=''>
       <Navbar />
+      <ToastContainer />
       <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/about-us' element={<AboutUs />}/>

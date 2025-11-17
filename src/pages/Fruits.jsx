@@ -14,9 +14,7 @@ const Fruits = () => {
     setFruitProducts(fruits)         
     },[products])
           
-    useEffect(()=>{
-    console.log("fruit result :" , result)
-    },[result])
+   
 
   return (
     <div className='w-[95%] mx-auto py-4 '>

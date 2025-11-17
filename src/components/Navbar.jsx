@@ -1,13 +1,14 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link, NavLink } from 'react-router'
 import logo from '../assets/logo.jpg'
 import cart from '../assets/cart.png'
 import search from '../assets/icon/search.png'
 import account from '../assets/icon/account.png'
 import trolley from '../assets/icon/trolley.svg'
+import { ShopContext } from '../context/GoshenContext'
 
 const Navbar = () => {
-
+  const {getItemCount, getCartTotal, currency} = useContext(ShopContext)
    const [subMenu, setSubmenu] = useState();
 
   return (
@@ -27,7 +28,7 @@ const Navbar = () => {
               
 
 
-            <Link to='/cart' className='flex gap-2 justify-center w-[150px] py-3 px-2 rounded-full bg-black text-white font-bold hover:bg-gray-400 hover:text-black'> $0.00 </Link>
+            <Link to='/cart' className='flex gap-2 justify-center w-[150px] py-3 px-2 rounded-full bg-black text-white font-bold hover:bg-gray-400 hover:text-black'>{currency}{`${getCartTotal()}.00`} {`(${getItemCount()})`} </Link>
                
          </div>
        </div>
