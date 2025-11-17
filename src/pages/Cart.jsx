@@ -1,7 +1,6 @@
-import React, { useContext, useEffect, useState } from 'react'
-import fruit from '../assets/products/birdy1.avif'
-import { ShopContext } from '../context/GoshenContext'
-import { Link } from 'react-router'
+import React, { useContext, useEffect, useState } from 'react';
+import { ShopContext } from '../context/GoshenContext';
+
 
 const Cart = () => {
   const {quantity, cartItems, products, currency, updateQuantityDeduct,
