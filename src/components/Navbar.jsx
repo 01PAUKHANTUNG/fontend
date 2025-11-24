@@ -81,20 +81,20 @@ const Navbar = () => {
 
             {/* DROPDOWN LIST */}
             {showDropdown && filtered.length > 0 && (
-              <ul className="absolute top-full left-0 w-[500px] bg-white border mt-1 rounded shadow max-h-96 overflow-y-auto z-50">
+              <ul className="w-[300px] absolute top-12 left-[-150px]  md:top-full md:left-0 sm:w-[500px] bg-white border mt-1 rounded shadow max-h-96 overflow-y-auto z-50">
                 {filtered.map((item) => (
                   <li
                     key={item.id}
                     onClick={() => handleSelect(item)}
                     className="p-2 hover:bg-gray-100 cursor-pointer">
-                      <Link to={`/product/${item.id}`} className="flex  gap-2 font-semibold items-center">
+                      <Link to={`/product/${item.id}`} className="flex gap-2 font-semibold items-center">
                        <img src={item.image} className="w-[80px] h-[80px]" alt=' ' />
                        <div className='flex flex-col gap-2'>
                            <p>{item.category}</p> 
                            <span className="text-sm text-gray-500">{item.subCategory}</span>
                       </div>
                       </Link>
-                      <span className="text-sm text-gray-500">{item.description}</span>
+                      <span className="flex text-sm text-gray-500">{item.description}</span>
                   </li>
                 ))}
               </ul>
