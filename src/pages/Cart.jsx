@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { ShopContext } from '../context/GoshenContext';
+import { motion } from 'framer-motion';
 
 
 const Cart = () => {
@@ -48,12 +49,20 @@ useEffect(()=>{
 
 
   return (
-    <div className='w-[95%] mx-auto'>
-      <div className='flex gap-4 m-6'>
+    <motion.div 
+     initial={{opacity:0, y:0}}
+         animate={{opacity:1, y:0}}
+         transition={{
+           delay:0.2,
+           duration:1
+         }}
+      className='w-[95%] mx-auto'>
+      <div
+      className='flex flex-col md:flex-row gap-4 m-6 mx-auto'>
 
-        <div className='flex w-[75%]'>
+        <div className='flex w-[75%] mx-auto'>
           <div className=' mx-auto '>
-            <ul className='grid grid-cols-[8fr_5fr_3fr_1fr] py-4 px-4 rounded-t-xl bg-gray-400'>
+            <ul className='hidden md:grid grid-cols-[8fr_5fr_3fr_1fr] py-4 px-4 rounded-t-xl bg-gray-400'>
               <li className=' font-semibold'>Product</li>
               <li className=' font-semibold mx-auto'>Quantity</li>
               <li className=' font-semibold'>Total</li>
@@ -63,9 +72,9 @@ useEffect(()=>{
             {
                cart.map((item, key)=> { 
                 return ( 
-            <div key={key} className='border-2 border-gray-500 grid grid-cols-[8fr_5fr_3fr_1fr] mt-2 py-4 px-4 items-center '>
-                <div className='flex gap-3'>
-                     <img className='w-[250px] h-[150px]' src={item.image} alt='' /> 
+            <div key={key} className='border-2 border-gray-500 grid grid-rows-1 md:grid-cols-[8fr_5fr_3fr_1fr] mt-2 py-4 px-4 items-center '>
+                <div className='flex flex-col md:flex-row gap-3'>
+                     <img className='w-[250px] h-[150px] mx-auto' src={item.image} alt='' /> 
                    <div className='flex flex-col gap-2'>
                       <p>{item.category}</p>
                       <p className='font-semibold text-xl'>{item.description}</p>
@@ -85,7 +94,7 @@ useEffect(()=>{
           </div>         
         </div>       
 
-        <div className='flex w-[35%] '>
+        <div className='flex w-full sm:w-[35%] '>
             <div className='flex flex-col gap-3 w-[95%] h-[230px] mx-auto  py-6 px-2 border-2 border-gray-500 rounded-xl'>
                <p className='flex text-xl justify-between '>Cart Total<span className='flex text-end '>{currency}{total}.00</span> </p>
                 <p className='flex text-xl justify-between '>Delivery Fee<span className='flex text-end '>{currency}{deliveryFee}.00</span> </p>
@@ -95,7 +104,7 @@ useEffect(()=>{
             </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

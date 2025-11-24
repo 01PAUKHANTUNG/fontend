@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import React, { useState } from 'react'
 
 const Login = () => {
@@ -6,9 +7,17 @@ const Login = () => {
 
   return (
     <div className='w-[95%] mx-auto'>
-      <div className='w-[600px] px-6 py-4 mx-auto mb-9 '>
+      <motion.div 
+       initial={{opacity:0, y:0}}
+         animate={{opacity:1, y:0}}
+         transition={{
+           delay:0.2,
+           duration:1
+         }}
+      className='w-[300px] sm:w-[600px] px-6 py-4 mx-auto mb-9 '>
 
-        <form className='flex flex-col gap-2'>
+        <form
+        className='flex flex-col gap-2'>
           <p className='flex font-bold py-4 text-2xl items-center justify-center'>{currentState} </p>
 
           {currentState === 'Log In' ? '' : <div className='flex flex-col gap-2'>
@@ -52,7 +61,7 @@ const Login = () => {
           : <button className='w-full py-3 px-4 mt-3 bg-amber-500 rounded-lg font-bold text-xl text-white hover:bg-amber-600 active:bg-amber-800'>Sign Up</button> }
 
         </form>
-      </div>
+      </motion.div>
     </div>
   )
 }

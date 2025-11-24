@@ -5,17 +5,17 @@ const Footer = () => {
   return (
     <div>
     <div className='border-t-2 border-gray-500 '>
-    <div className='flex w-[95%] py-4 px-4 justify-between mx-auto '>
+    <div className='flex flex-col gap-3  sm:flex-row w-[95%] py-4 px-4 justify-between mx-auto '>
        <div>
-         <p className='text-black text-xl mb-2'>About Us</p>
+         <p className='text-black text-xl sm:hidden md:flex mb-2'>About Us</p>
        </div>
        <div>
          <p className='text-black text-xl mb-2'>Contact Us</p>
-          <p className='text-black '>Email :</p>
+          <p className='text-gray-500'>Email :</p>
           <p className='text-black '>goshenstore20@gmail.com</p>
-          <p className='text-black '>Phone :</p>
+          <p className='text-gray-500'>Phone :</p>
           <p className='text-black '>+61 470 499 780</p>
-          <p className='text-black '>Address :</p>
+          <p className='text-gray-500 '>Address :</p>
           <p className='text-black '>2C Station St, Ringwood, Melbourne, VIC, Australia, Victoria</p>
        </div>
        <div className=''>

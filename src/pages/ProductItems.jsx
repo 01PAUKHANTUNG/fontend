@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router'
 import { ShopContext } from '../context/GoshenContext.jsx';
+import { motion } from 'framer-motion';
 
 const ProductItems = () => {
     const {products, currency, addToCart, cartItems, quantity, decrease, increase} = useContext(ShopContext);
@@ -17,15 +18,13 @@ const ProductItems = () => {
             }       
         })
     };
-
-   
+ 
     const getTotal = ()=>{
       let sum = 0;    
      if(quantity > 0){
          sum = productData.price * quantity 
          return sum;
-     }
-     
+     }  
     }
 
     useEffect(()=>{
@@ -37,16 +36,23 @@ const ProductItems = () => {
   return (
     <div className='w-[95%] mx-auto py-6'>
 
-      <div className='flex gap-5 justify-center'>
+      <motion.div 
+       initial={{opacity:0, y:0}}
+         animate={{opacity:1, y:0}}
+         transition={{
+           delay:0.2,
+           duration:1
+         }}
+         className='flex flex-col  sm:flex-row gap-5 justify-center'>
         <div className='border-2 border-gray-500 py-6 px-6'>
-          <img className='w-[300px] h-[300px]' src={productData.image} alt=''/>
+          <img className='w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] mx-auto' src={productData.image} alt=''/>
           
         </div>
          <div className='flex flex-col gap-3'>
             <p> Goshen Store</p>
             <p className='text-3xl my-5'>{productData.description} </p>
             <p className='text-xl font-bold'>{currency}{productData.price}.00 </p>
-             <div className='flex flex-cols gap-6 items-center my-4'>
+             <div className='flex flex-cols gap-6 items-center my-4 mx-auto'>
                 <button  onClick={()=>decrease()} className='w-[50px] py-3 px-3 text-xl font-bold rounded-full border-2 border-black hover:scale-105 hover:shadow-lg'>-</button>
                 <p className='text-2xl '>{quantity}</p>
                 <button onClick={()=>increase()} className='w-[50px] py-3 px-3 text-xl font-bold rounded-full border-2 border-black hover:scale-105 hover:shadow-lg'>+</button>
@@ -61,7 +67,7 @@ const ProductItems = () => {
                <button onClick={()=>addToCart(productData.id, quantity, productData.price, getTotal())} className='w-[400px] py-2 px-4 bg-black hover:bg-green-700 text-white text-xl font-semibold hover:shadow-lg '> Add to Card</button>
             </div>
         </div>
-      </div>
+      </motion.div>
 
     </div>
   )

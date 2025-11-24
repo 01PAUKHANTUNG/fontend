@@ -3,7 +3,7 @@ import React from 'react'
 const Title = (props) => {
   return (
     <div>
-      <p className='text-3xl mb-4'>{props.title}</p>
+      <p className='text-2xl md:text-4xl font-semibold leading-tight'>{props.title}</p>
     </div>
   )
 }

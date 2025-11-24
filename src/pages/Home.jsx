@@ -4,6 +4,7 @@ import Title from '../components/Title.jsx'
 import { ShopContext } from '../context/GoshenContext.jsx'
 import NewArrival from '../components/NewArrival.jsx'
 import BestSeller from '../components/BestSeller.jsx'
+import Hero from '../components/Hero.jsx'
 
 
 const Home = () => {
@@ -12,7 +13,7 @@ const Home = () => {
   return (
     <div className='w-[95%] mx-auto'>
       <div className='py-6 '>
-           <p> Hero Section </p>
+           <Hero />
        </div>
        <div className='py-6'>
          <NewArrival />
